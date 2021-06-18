@@ -1,0 +1,31 @@
+.container-banner {
+  display: flex;
+  justify-content: space-between;
+  background: #c4c4c4;
+  height: 440px;
+}
+
+.container-banner h1 {
+  display: flex;
+  align-self: flex-end;
+  margin: 63px 5%;
+}
+
+.container-banner form {
+  display: flex;
+  align-self: flex-end;
+  margin: 63px 5%;
+}
+
+.button-register {
+  width: 164px;
+  height: 64px;
+}
+
+.input-email {
+  padding: 16px;
+  width: 350px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 64px;
+}
