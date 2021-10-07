@@ -2,6 +2,7 @@ import Description from '../components/Description';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import SectionInfor from '../components/SectionInfor';
+import SectionCads from '../components/SectionCards';
 
 function Main() {
   return(
@@ -10,6 +11,7 @@ function Main() {
       <Header />
       <Banner />
       <SectionInfor />
+      <SectionCads />
     </>
   );
 }
