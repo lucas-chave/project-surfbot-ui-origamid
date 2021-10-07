@@ -37,3 +37,7 @@
 .container-infor p {
   margin: 8px 16px;
 }
+
+.container-infor h4 {
+  font-weight: 400;
+}
