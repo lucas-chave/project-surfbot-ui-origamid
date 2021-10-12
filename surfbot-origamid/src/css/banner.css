@@ -7,9 +7,21 @@
 
 .container-banner {
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 450px;
+}
+
+.foto-banner {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  display: flex;
   justify-content: space-between;
-  background: #c4c4c4;
-  height: 440px;
+  align-items: flex-end;
+  width: 100%;
 }
 
 .container-banner h1 {
