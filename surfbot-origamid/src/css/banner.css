@@ -40,13 +40,22 @@
 
 .button-register {
   width: 164px;
-  height: 64px;
+  height: 50px;
+  border-radius: 0 5px 5px 0;
+  background-color: #EE2211;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
+  font-weight: 600;
 }
 
 .input-email {
-  padding: 16px;
+  padding: 12px;
   width: 350px;
   font-size: 14px;
   font-weight: 400;
-  height: 64px;
+  height: 50px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
 }
