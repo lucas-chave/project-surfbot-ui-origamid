@@ -1,4 +1,4 @@
-import logo from '../images/logo.png'
+import logo from '../images/surfbot-logo.svg'
 import '../css/header.css'
 import NavMenu from './NavMenu'
 

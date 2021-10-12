@@ -9,11 +9,14 @@
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
-  background: #e1e1e1;
+  background: #17222D;
+  ;
 }
 
 .image-logo {
   width: 150px;
   height: 45px;
   margin-left: 5%;
+  color: #fff;
+  /* background-color: #fff; */
 }
