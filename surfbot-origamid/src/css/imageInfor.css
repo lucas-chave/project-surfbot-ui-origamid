@@ -23,13 +23,15 @@
   flex-direction: column;
 }
 
+.container-rigth span {
+  color: #1188EE;
+}
+
 .container-rigth h1 {
   font-size: 72px;
   line-height: 74px;
   font-family: Alice;
 }
-
-/* .container-rigth h1:: */
 
 .container-rigth p {
   margin: 24px 0;

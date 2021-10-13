@@ -1,8 +1,7 @@
-function Heading(props) {
-  const { text } = props
+function Heading() {
   return (
     <div>
-      <h1>{text}</h1>
+      <h1><span>Aulas</span> em uma das melhores praias de <span>Fortaleza.</span></h1>
     </div>
   )
 }

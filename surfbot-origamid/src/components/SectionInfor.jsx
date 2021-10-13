@@ -42,7 +42,7 @@ function SectionInfor() {
         />
       </div>
       <div className="container-rigth">
-        <Heading text="Aulas em uma das melhores praias de Fortaleza."/>
+        <Heading />
         <CardList />
         <div>
           <Paragraph text={ text } />
