@@ -1,11 +1,14 @@
 import image from '../images/elipse.png'
 import '../css/cardList.css'
+import iconBoia from '../images/boia.svg';
+import iconCoco from '../images/coco.svg';
+import iconSandalhas from '../images/sandalhas.svg';
 
 function CardList() {
   const data = [
-    { image: image, distance: '16Km' },
-    { image: image, distance: '22Km' },
-    { image: image, distance: '14Km' },
+    { image: iconBoia, distance: '16Km' },
+    { image: iconCoco, distance: 'Restaurantes a beira mar' },
+    { image: iconSandalhas, distance: 'Salva-vidas' },
   ]
   
   return (
