@@ -1,4 +1,5 @@
-import '../css/navMenu.css'
+import React from 'react';
+import '../css/navMenu.css';
 
 function NavMenu() {
   return(

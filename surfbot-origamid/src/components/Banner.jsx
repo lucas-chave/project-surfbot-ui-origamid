@@ -1,5 +1,6 @@
+import React from 'react';
 import '../css/banner.css';
-import imag from '../fotos/foto-srf.svg'
+import imag from '../fotos/foto-srf.svg';
 
 function Banner() {
   return (

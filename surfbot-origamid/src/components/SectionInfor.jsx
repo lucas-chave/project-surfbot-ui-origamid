@@ -1,11 +1,12 @@
-import ImageS2 from './ImageS2'
-import image from '../fotos/abigail.svg'
-import map from '../fotos/mapa.svg'
-import Heading from './Heading'
-import CardList from './CardList'
-import Paragraph from './Paragraph'
-import TextInfor from './TextInfor'
-import '../css/imageInfor.css'
+import React from 'react';
+import ImageS2 from './ImageS2';
+import image from '../fotos/abigail.svg';
+import map from '../fotos/mapa.svg';
+import Heading from './Heading';
+import CardList from './CardList';
+import Paragraph from './Paragraph';
+import TextInfor from './TextInfor';
+import '../css/imageInfor.css';
 
 function SectionInfor() {
   const text = (
@@ -25,7 +26,8 @@ function SectionInfor() {
     standard dummy text ever since the 1500s, when an
     unknown printer took a galley of type and scrambled
     it to make a type specimen book.
-`)
+`);
+
   return(
     <div className="container-section">
       <div className="container-left">
@@ -50,7 +52,7 @@ function SectionInfor() {
         <Paragraph text={ text } />
       </div>
     </div>
-  ) 
+  );
 }
 
-export default SectionInfor
+export default SectionInfor;

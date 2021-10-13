@@ -1,8 +1,15 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 function Paragraph(props) {
-  const { text } = props
+  const { text } = props;
   return(
     <p>{ text }</p>
-  )
+  );
 }
 
-export default Paragraph
+Paragraph.propTypes = {
+  text: PropTypes.string,
+}.isRequired
+
+export default Paragraph;

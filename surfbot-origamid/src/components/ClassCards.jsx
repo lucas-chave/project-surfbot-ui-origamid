@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function ClassCards(props) {
   const { title } = props;
@@ -6,5 +6,5 @@ function ClassCards(props) {
     <div>
       <h4>{ title }</h4>
     </div>
-  )
+  );
 }
