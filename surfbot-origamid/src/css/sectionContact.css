@@ -62,7 +62,11 @@
 
 .container-information {
   display: flex;
-  flex-direction: column;
+}
+
+.image-icons-information {
+  margin-top: -210px;
+  /* margin-left: 30px; */
 }
 
 .title-information-address {
@@ -152,7 +156,10 @@
 
 .trace {
   width: 2px;
-  display: block;
+  display: flex;
+  align-self: center;
+  margin: 0 auto;
   height: 477px;
-  background: #181a1d;
+  background: #EFF4F9;
+  
 }

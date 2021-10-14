@@ -6,6 +6,7 @@ import SectionInfor from '../components/SectionInfor';
 import SectionCads from '../components/SectionCards';
 import SectionQuote from '../components/SectionQuote';
 import SectionContact from '../components/SectionContact';
+import SectionFooter from '../components/SectionFooter';
 
 function Main() {
   return(
@@ -17,6 +18,7 @@ function Main() {
       <SectionCads />
       <SectionQuote />
       <SectionContact />
+      <SectionFooter />
     </>
   );
 }
