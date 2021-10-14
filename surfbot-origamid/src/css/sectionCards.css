@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   background: #EFF4F9;
+  padding-bottom: 57px;
 }
 
 .icon-wave {
@@ -96,4 +97,25 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.container-cards p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.threePeople {
+  color: #FF3726;
+}
+
+.contact-name::before {
+  content: '';
+  width: 90px;
+  display: block;
+  position: absolute;
+  margin: 1px 0 0 50px;
+  height: 2px;
+  background: #FF3726;
 }

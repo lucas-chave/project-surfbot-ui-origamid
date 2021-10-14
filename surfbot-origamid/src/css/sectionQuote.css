@@ -1,0 +1,21 @@
+.container-section-quote {
+  width: 100%;
+  height: 480px;
+}
+
+.image-quote {
+  width: 100%;
+  position: absolute;
+  height: 480px;
+
+}
+
+.container-section-quote p {
+  padding-top: 240px;
+  position: relative;
+  font-family: Alice;
+  font-size: 72px;
+  line-height: 74px;
+  text-align: center;
+  color: #FFFFFF;
+}

@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import SectionInfor from '../components/SectionInfor';
 import SectionCads from '../components/SectionCards';
+import SectionQuote from '../components/SectionQuote';
 
 function Main() {
   return(
@@ -13,6 +14,7 @@ function Main() {
       <Banner />
       <SectionInfor />
       <SectionCads />
+      <SectionQuote />
     </>
   );
 }

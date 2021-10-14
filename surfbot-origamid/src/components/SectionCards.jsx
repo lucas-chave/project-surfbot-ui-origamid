@@ -64,6 +64,8 @@ function SectionCads() {
             </div>
           ))}
         </div>
+        <p>Possui um grupo com mais de <span className="threePeople">3 pessoas</span>?</p>
+        <p>Entre <span className="contact-name">em contato</span> para um desconto personalizado.</p>
     </div>
   );
 }
