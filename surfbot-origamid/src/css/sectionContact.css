@@ -159,7 +159,6 @@
   width: 2px;
   display: flex;
   align-self: center;
-  /* margin: 0 auto; */
   height: 477px;
   background: #EFF4F9;
   
@@ -200,6 +199,12 @@
   }
 }
 
+@media screen and (max-width: 510px) {
+  .container-input-contact input {
+    width: 28em;
+  }
+}
+
 @media screen and (max-width: 380px) {
   .title-section-contact h2 {
     font-size: 32px;
@@ -212,3 +217,4 @@
     margin: 0;
   }
 }
+

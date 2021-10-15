@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/sectionInfor.css';
 
 function ImageS2(props) {
   const { image, alt } = props;

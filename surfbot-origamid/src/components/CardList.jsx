@@ -1,8 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 import iconBoia from '../images/boia.svg';
 import iconCoco from '../images/coco.svg';
 import iconSandalhas from '../images/sandalhas.svg';
-import '../css/cardList.css';
 
 function CardList() {
   const data = [
@@ -12,15 +12,32 @@ function CardList() {
   ];
 
   return (
-    <div className="container-card">
+    <ContainerCard className="container-card">
       {data.map((obj) => (
-        <div className="container-card-list" >
+        <ContainerCardList className="container-card-list" >
           <img src={ obj.image } alt="exaple" />
           <p>{obj.distance} de costa</p>
-        </div>
+        </ContainerCardList>
       ))}
-    </div>
+    </ContainerCard>
   );
 }
+
+const ContainerCard = styled.div`
+  margin-top: 42px;
+  border-top: solid 1px #808080;
+`;
+
+const ContainerCardList = styled.div`
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  border-bottom: solid 1px #808080;
+  padding: 16px 0;
+
+  img {
+    margin-right: 40px;
+  }
+`;
 
 export default CardList;
