@@ -20,21 +20,22 @@ function NavMenu() {
             </UlResponsive>
           </ContainerListResponsive>
         </>
-      )   
+      );   
     }
     return <img onClick={() => proxyUseVarBool() } src={menu} alt="icone menu"/>;
   }
+
   return(
     <>
       {widthPage > 575 ? (
-        <ContainerNav className="container-list">
-          <List className="list">
+        <ContainerNav>
+          <List>
             <ListItem>Praia</ListItem>
-            <IconElement className="element-circle"></IconElement>
+            <IconElement></IconElement>
             <ListItem>Aulas</ListItem>
-            <IconElement className="element-circle"></IconElement>
+            <IconElement></IconElement>
             <ListItem>contato</ListItem>
-            <IconElement className="element-circle"></IconElement>
+            <IconElement></IconElement>
             <ListItem>Matricule-se</ListItem>
           </List>
         </ContainerNav>

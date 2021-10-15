@@ -4,9 +4,9 @@ import image from '../images/quote-image.png';
 
 function SectionQuote() {
   return (
-    <Div className="container-section-quote">
-      <Image src={ image } alt="imagem do mar" className="image-quote" />
-      <TextQuote className="text-quote">“O surf liberta as ondas de uma vida.”</TextQuote>
+    <Div>
+      <Image src={ image } alt="imagem do mar" />
+      <TextQuote>“O surf liberta as ondas de uma vida.”</TextQuote>
     </Div>
   );
 }

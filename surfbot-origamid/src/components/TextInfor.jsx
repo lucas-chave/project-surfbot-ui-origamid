@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 function TextInfor(props) {
   const { textOne, textTwo, h4 } = props;
   return(
-    <ContainerInfor className="container-infor">
-      <Title className="title">{ h4 }</Title>
-      <Text className="text">{ textOne }</Text>
-      <Text className="text">{ textTwo }</Text>
+    <ContainerInfor>
+      <Title>{ h4 }</Title>
+      <Text>{ textOne }</Text>
+      <Text>{ textTwo }</Text>
     </ContainerInfor>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from  'styled-components';
 import ImageS2 from './ImageS2';
-import image from '../fotos/abigail.svg';
-import map from '../fotos/mapa.svg';
+import image from '../images/abigail.svg';
+import map from '../images/mapa.svg';
 import Heading from './Heading';
 import CardList from './CardList';
 import Paragraph from './Paragraph';
@@ -29,8 +29,8 @@ function SectionInfor() {
 `);
 
   return(
-    <ContainerSection className="container-section">
-      <ContainerLeft className="container-left">
+    <ContainerSection>
+      <ContainerLeft>
         <ImageSurf>
           <ImageS2 image={ image } alt="imagens de pranchas" />
         </ImageSurf>
@@ -43,10 +43,10 @@ function SectionInfor() {
           textTwo="Ônibus linhas: 51, 52."
         />
       </ContainerLeft>
-      <ContainerRigth className="container-rigth">
+      <ContainerRigth>
         <Heading />
         <CardList />
-        <TextInformation className="text-infor">
+        <TextInformation>
           <Paragraph text={ text } />
           <Paragraph text={ text } />
         </TextInformation>

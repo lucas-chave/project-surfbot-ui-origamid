@@ -18,15 +18,13 @@
 .sub-container-contact {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .sub-container-contact form {
   display: flex;
   flex-direction: column;
-  /* margin: 15px; */
-
 }
 
 .container-input-contact {

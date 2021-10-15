@@ -6,7 +6,7 @@ import NavMenu from './NavMenu';
 function Header() {
   return(
     <Div>
-      <ImageLogo className="image-logo" src={ logo } alt="logo" />
+      <ImageLogo src={ logo } alt="logo" />
       <NavMenu />
     </Div>
   );

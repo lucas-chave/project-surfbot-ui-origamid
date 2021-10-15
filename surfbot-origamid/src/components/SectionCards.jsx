@@ -48,13 +48,13 @@ function SectionCads() {
         <img src={ waves } alt="icone de ondas" className="icon-wave" />
         <h4 className="title-cards">Aulas</h4>
         <div className="cards">
-          {cardsData.map((card) => (
-            <div className="card">
+          {cardsData.map((card, index) => (
+            <div key={index} className="card">
               <img src={card.image} alt="icone de uma prancha" className="icon-card" />
               <h4 className="title-card">{card.title}</h4>
               <div className="tags-card">
-                {card.tags.map((tag) => (
-                  <span>{tag}</span>
+                {card.tags.map((tag, index) => (
+                  <span key={index}>{tag}</span>
                 ))}
               </div>
               <div className="card-price">{`R$ ${card.price} / Aula`}</div>

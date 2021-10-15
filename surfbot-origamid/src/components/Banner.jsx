@@ -1,23 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import image from '../fotos/foto-srf.svg';
+import image from '../images/foto-srf.svg';
 import seta from '../images/seta.svg';
 
 function Banner() {
   return (
-    <MainContainer className="main-container">
-      <Image src={ image } alt="foto do mar com dois rapazes em cima de pranchas" className="image-banner"/>
-      <ContainerBanner className="container-banner">
-        <HeadingOne className="title-banner">Escola de Surf</HeadingOne>
+    <MainContainer>
+      <Image src={ image } alt="foto do mar com dois rapazes em cima de pranchas" />
+      <ContainerBanner>
+        <HeadingOne>Escola de Surf</HeadingOne>
         <FormEmail>
           <InputEmail
-            className="input-email"
             placeholder="Email" 
             type="email"
             name="email"
             id="email"
           />
-          <ButtonRegister className="button-register">MATRICULE-SE<img src={seta} alt="icone"/></ButtonRegister>
+          <ButtonRegister>MATRICULE-SE<img src={seta} alt="icone"/></ButtonRegister>
         </FormEmail>
       </ContainerBanner> 
     </MainContainer>

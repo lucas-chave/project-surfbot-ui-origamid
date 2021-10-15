@@ -4,9 +4,9 @@ import icon from '../images/prancha.svg';
 
 function SectionFooter() {
   return (
-    <Footer className="container-footer">
-      <Par className="elements-footer">Surfnet 2017 - alguns direitos reservados..</Par>
-      <Icon  className="elements-footer" src={ icon } alt="icone de prancha" />
+    <Footer>
+      <Par>Surfnet 2017 - alguns direitos reservados..</Par>
+      <Icon src={ icon } alt="icone de prancha" />
     </Footer>
   );
 }

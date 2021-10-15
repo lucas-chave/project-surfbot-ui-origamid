@@ -12,9 +12,9 @@ function CardList() {
   ];
 
   return (
-    <ContainerCard className="container-card">
-      {data.map((obj) => (
-        <ContainerCardList className="container-card-list" >
+    <ContainerCard>
+      {data.map((obj, index) => (
+        <ContainerCardList key={ index }>
           <img src={ obj.image } alt="exaple" />
           <p>{obj.distance} de costa</p>
         </ContainerCardList>
