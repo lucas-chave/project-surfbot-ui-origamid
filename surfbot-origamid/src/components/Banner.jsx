@@ -8,7 +8,7 @@ function Banner() {
     <div className="main-container">
       <img src={ imag } alt="foto do mar com dois rapazes em cima de pranchas" className="image-banner"/>
       <div className="container-banner">
-        <h1>Escola de Surf</h1>
+        <h1 className="title-banner">Escola de Surf</h1>
         <form>
           <input
             className="input-email"
