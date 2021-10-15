@@ -9,7 +9,6 @@ function SectionContact() {
     <div className="container-section-contact">
       <h2 className="title-section-contact">Contato</h2>
       <div className="sub-container-contact">
-
         <form>
           <div className="container-input-contact">
             <label>Nome</label>

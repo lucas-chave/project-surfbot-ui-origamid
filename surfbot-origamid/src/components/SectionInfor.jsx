@@ -6,7 +6,7 @@ import Heading from './Heading';
 import CardList from './CardList';
 import Paragraph from './Paragraph';
 import TextInfor from './TextInfor';
-import '../css/imageInfor.css';
+import '../css/sectionInfor.css';
 
 function SectionInfor() {
   const text = (
@@ -31,12 +31,14 @@ function SectionInfor() {
   return(
     <div className="container-section">
       <div className="container-left">
-        <div className="image">
-          <ImageS2 image={ image } alt="exaple" />
-        </div>
-        <div className="image-map">
-          <ImageS2 image={ map } alt="example"/>
-        </div>
+        {/* <div> */}
+          <div className="image">
+            <ImageS2 image={ image } alt="exaple" />
+          </div>
+          <div className="image-map">
+            <ImageS2 image={ map } alt="example"/>
+          </div>
+        {/* </div> */}
         <TextInfor
           h4="COMO CHEGAR"
           textOne="Carro pela via  Washington Soares Sentido  Aldeota"
@@ -46,10 +48,10 @@ function SectionInfor() {
       <div className="container-rigth">
         <Heading />
         <CardList />
-        <div>
+        <div className="text-infor">
+          <Paragraph text={ text } />
           <Paragraph text={ text } />
         </div>
-        <Paragraph text={ text } />
       </div>
     </div>
   );

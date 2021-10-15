@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/imageInfor.css';
+import '../css/sectionInfor.css';
 
 function TextInfor(props) {
   const { textOne, textTwo, h4 } = props;

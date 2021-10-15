@@ -5,37 +5,56 @@
   text-decoration: none;
 }
 
+.main-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image-banner {
+  position: relative;
+  width: 100%;
+}
+
 .container-banner {
   display: flex;
-  width: 100%;
-  height: 450px;
-}
-
-.foto-banner {
-  position: relative;
-}
-
-.container {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20%;
-}
-
-.container-banner h1 {
-  display: flex;
+  flex-wrap: wrap;
   align-self: flex-end;
-  padding: 74px 5%;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.title-banner {
   color: #fff;
+  display: flex;
+  align-self: center;
   font-family: Alice, serif;
   font-size: 72px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .container-banner form {
   display: flex;
-  padding: 63px 5%;
+  align-self: center;
+  padding-bottom: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
+
+}
+
+.input-email {
+  padding: 12px;
+  width: 350px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
 }
 
 .button-register {
@@ -49,13 +68,15 @@
   font-weight: 600;
 }
 
-.input-email {
-  padding: 12px;
-  width: 350px;
-  font-size: 14px;
-  font-weight: 400;
-  height: 50px;
-  border: none;
-  border-radius: 5px 0 0 5px;
-  box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
+
+@media screen and (max-width: 450px) {
+  .container-banner {
+    display: none;
+  }
+  .image-banner {
+    display: none;
+  }
+  .title-banner {
+    font-size: 32px;
+  }
 }
