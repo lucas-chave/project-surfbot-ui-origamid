@@ -73,8 +73,10 @@ function FormRegister() {
                     </select>
                   </div>
                 </div>
-                <LabelData>Código de segurança</LabelData>
-                <InputDataCard type="text"/>
+                <div className="container-code-security">
+                  <LabelData>Código de segurança</LabelData>
+                  <InputDataCard type="text"/>
+                </div>
               </DataCard2>
             </ContainerDataCard>
           </MethodPayment>
@@ -93,7 +95,8 @@ function FormRegister() {
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
+  flex-wrap: wrap-reverse;
   margin-top: 32px;
   margin-bottom: 30px;
 `;
@@ -134,6 +137,12 @@ const Inform = styled.p`
     content: url(${block});
     margin-right: 5px;
   }
+
+  @media screen and (max-width: 620px) {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
 `;
 
 const InputLagger = styled.input`
@@ -144,11 +153,17 @@ const InputLagger = styled.input`
   border-radius: 5px;
   padding: 10px;
   border: none;
+  @media screen and (max-width: 615px) {
+    width: 270px;
+  }
 `;
 
 const MethodPayment = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 30px;
   h4 {
     font-weight: 500;
@@ -199,13 +214,51 @@ const ContainerRadios = styled.div`
 
 const ContainerDataCard = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: 20px 10px 0 10px;
+
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+  }
 `;
 
 const DataCard1 = styled.div`
   display: flex;
   flex-direction: column;
+  /* flex-wrap: wrap; */
+
+`;
+
+const DataCard2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-top: 20px; */
+  margin: 20px 10px 0 10px;
+
+  .container-selects {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-code-security {
+    display: flex;
+    flex-direction: column;
+  }
+
+  select {
+    width: 120px;
+    height: 50px;
+    background: #EFF4F9;
+    box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin:   8px 0 2px 0;
+  }
 `;
 
 const LabelData = styled.label`
@@ -223,29 +276,6 @@ const InputDataCard = styled.input`
   border-radius: 5px;
   border: none;
   padding: 10px;
-`;
-
-const DataCard2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-top: 13px;
-
-  .container-selects {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  select {
-    width: 120px;
-    height: 50px;
-    background: #EFF4F9;
-    box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-    margin:   8px 0 2px 0;
-  }
 `;
 
 const ButtonRegister = styled.button`
@@ -271,25 +301,30 @@ const ContainerButton = styled.div`
     line-height: 21px;
     color: #445566;
   }
-`;
 
-const OptionSelected = styled.option`
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  color: #BBCCDD;
+  @media screen and (max-width: 620px) {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const ContainerDataUser = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Informations1 = styled.div`
   display: flex;
   flex-direction: column;
   width: 270px;
+  justify-content: center;
+  margin: 0 10px;
 `;
 
 const InformationsSelect = styled.select`
