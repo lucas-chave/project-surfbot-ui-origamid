@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import menu from '../images/menu.svg';
 
@@ -16,7 +17,9 @@ function NavMenu() {
               <li>Praia</li>
               <li>Aulas</li>
               <li>contato</li>
-              <li>Matricule-se</li>
+              <Link to="/register">
+                <li>Matricule-se</li>
+              </Link>
             </UlResponsive>
           </ContainerListResponsive>
         </>
@@ -36,7 +39,9 @@ function NavMenu() {
             <IconElement></IconElement>
             <ListItem>contato</ListItem>
             <IconElement></IconElement>
-            <ListItem>Matricule-se</ListItem>
+            <Link to="/register">
+              <ListItem>Matricule-se</ListItem>
+            </Link>
           </List>
         </ContainerNav>
         ) : alterMenu()}

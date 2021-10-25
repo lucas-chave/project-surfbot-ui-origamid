@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../images/surfbot-logo.svg';
 import NavMenu from './NavMenu';
@@ -6,7 +7,9 @@ import NavMenu from './NavMenu';
 function Header() {
   return(
     <Div>
-      <ImageLogo src={ logo } alt="logo" />
+      <Link to="/">
+        <ImageLogo src={ logo } alt="logo" />
+      </Link>
       <NavMenu />
     </Div>
   );
