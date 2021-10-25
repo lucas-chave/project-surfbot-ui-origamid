@@ -22,23 +22,23 @@ function MethodCourse() {
       image: pran2,
       title: 'ADULTO',
       tags: [
-        'Público entre 5 e 15 anos',
+        'Público maior de 16 anos',
         'equipamentos fornecidos',
         'Horários de sexta a sábado',
         '2 horas seguidas de aula',
       ],
-      price: '49,00',
+      price: '59,00',
     },
     {
       image: pran3,
       title: 'PROFISSIONAL',
       tags: [
-        'Público entre 5 e 15 anos',
+        'Público maior de 16 anos',
         'equipamentos fornecidos',
         'Horários de sexta a sábado',
         '2 horas seguidas de aula',
       ],
-      price: '49,00',
+      price: '69,00',
     },
   ];
 
@@ -93,7 +93,7 @@ function MethodCourse() {
       <h4>Escolha o Plano</h4>
       <ContainerInputs>
         <ContainerInput id="containerChild">
-          <input id="child" name="flat" type="radio" onClick={({target}) => setInputSelected(target.id) } />
+          <input defaultChecked id="child" name="flat" type="radio" onClick={({target}) => setInputSelected(target.id) } />
           <label htmlFor="child">Infantil</label>
         </ContainerInput>
         <div className="separator"/>
