@@ -61,7 +61,7 @@ function MethodCourse() {
         </div>
         <div className="card-price">{`R$ ${cardsData[numberCard].price} / Aula`}</div>
       </div>
-    )
+    );
   }
 
   useEffect(() => {
