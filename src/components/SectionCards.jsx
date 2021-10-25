@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import waves from '../images/ondas.svg';
 import pran1 from '../images/surfbot-icon.svg';
 import pran2 from '../images/Group1.svg';
@@ -58,9 +59,9 @@ function SectionCads() {
                 ))}
               </div>
               <div className="card-price">{`R$ ${card.price} / Aula`}</div>
-              <button className="button-registration">
+              <Link to="/register" className="button-registration">
                 MATRICULE-SE<img src={setButton} alt="icone de botão" className="image-button" />
-              </button>
+              </Link>
             </div>
           ))}
         </div>
