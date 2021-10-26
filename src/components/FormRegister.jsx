@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import block from '../images/cadeado.svg'
+import { connect } from 'react-redux';
+import block from '../images/cadeado.svg';
 import MethodCourse from './MethodCourse';
 
-function FormRegister() {
+function FormRegister(props) {
   return (
     <Container>
       <ContainerForm>
@@ -81,7 +82,7 @@ function FormRegister() {
             </ContainerDataCard>
           </MethodPayment>
           <ContainerButton>
-            <p>Seu Cartão será debitado em R$ 49,00</p>
+            <p>Seu Cartão será debitado em R$ {`${props.numberValue}`},00</p>
             <ButtonRegister>REALIZAR MATRÍCULA</ButtonRegister>
           </ContainerButton>
           <Inform>Informações seguras e criptografadas</Inform>
@@ -89,7 +90,13 @@ function FormRegister() {
       </ContainerForm>
       <MethodCourse />
     </Container>
-  )
+  );
+}
+
+function mapStateToProps(state) {
+  return {
+    numberValue: state.reducerValue.state,
+  };
 }
 
 const Container = styled.div`
@@ -339,4 +346,4 @@ const InformationsSelect = styled.select`
   padding: 10px;
 `;
 
-export default FormRegister;
+export default connect(mapStateToProps, null)(FormRegister);

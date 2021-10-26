@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { changeAdult, changeProfessional, changeChild } from '../redux/actions';
 import pran1 from '../images/surfbot-icon.svg';
 import pran2 from '../images/Group1.svg';
 import pran3 from '../images/Group2.svg';
 
-function MethodCourse() {
+function MethodCourse(props) {
+  const { adultDispatch, childDispatch, professionalDispatch } = props;
   const [inputSelected, setInputSelected] = useState('child');
   const cardsData = [
     {
@@ -73,20 +76,23 @@ function MethodCourse() {
         professional.classList.remove('color');
         adult.classList.remove('color');
         child.classList.add('color');
+        childDispatch();
       }
       if (inputSelected === 'adult') {
         professional.classList.remove('color');
         child.classList.remove('color');
         adult.classList.add('color');      
+        adultDispatch();
       }
       if (inputSelected === 'professional') {
         child.classList.remove('color');
         adult.classList.remove('color');
         professional.classList.add('color');
+        professionalDispatch();
       }
     }
     changeColorInput();
-  }, [inputSelected]);
+  }, [inputSelected, childDispatch, adultDispatch, professionalDispatch]);
 
   return (
     <Container>
@@ -112,6 +118,14 @@ function MethodCourse() {
       </Card>
     </Container>
   );
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    childDispatch: () => dispatch(changeChild()),
+    adultDispatch: () => dispatch(changeAdult()),
+    professionalDispatch: () => dispatch(changeProfessional())
+  }
 }
 
 const Container = styled.div`
@@ -171,4 +185,4 @@ const Card = styled.div`
   margin-top: 22px;
 `;
 
-export default MethodCourse;
+export default connect(null, mapDispatchToProps)(MethodCourse);
