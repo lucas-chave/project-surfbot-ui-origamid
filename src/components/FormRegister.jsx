@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -6,6 +6,25 @@ import block from '../images/cadeado.svg';
 import MethodCourse from './MethodCourse';
 
 function FormRegister(props) {
+  const [changeColor, setChangeColor] = useState();
+
+  useEffect(() => {
+    function changeClass() {
+      const inputBank = document.querySelector('#container-bank')
+      const inputCredit = document.querySelector('#container-credit')
+  
+      if (changeColor === 'credit') {
+        inputCredit.classList.add('backgroundColor');
+        inputBank.classList.remove('backgroundColor');
+      }
+      if (changeColor === 'bank') {
+        inputCredit.classList.remove('backgroundColor');
+        inputBank.classList.add('backgroundColor');
+      }
+    }
+    changeClass(); 
+  }, [changeColor]);
+
   return (
     <Container>
       <ContainerForm>
@@ -45,11 +64,11 @@ function FormRegister(props) {
           <MethodPayment>
             <h4>Formas de pagamento</h4>
             <ContainerRadios>
-              <ContainerInputRadio>
+              <ContainerInputRadio onChange={({ target }) => setChangeColor(target.id)} id="container-credit">
                 <InputRadio name="method" id="credit" type="radio" />
                 <label htmlFor="credit">Cartão de Crédito</label>
               </ContainerInputRadio>
-              <ContainerInputRadio>
+              <ContainerInputRadio onChange={({ target }) => setChangeColor(target.id)} id="container-bank">
                 <InputRadio name="method" id="bank" type="radio" />
                 <label htmlFor="bank">Boleto Bancário</label>
               </ContainerInputRadio>
@@ -211,6 +230,7 @@ const ContainerInputRadio = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
+  height: 100%;
 `;
 
 const ContainerRadios = styled.div`
@@ -221,7 +241,10 @@ const ContainerRadios = styled.div`
   height: 50px;
   background: #EFF4F9;
   box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
-  border-radius: 5px;
+
+  .backgroundColor {
+    background: #BBCCDD;
+  }
 `;
 
 const ContainerDataCard = styled.div`
