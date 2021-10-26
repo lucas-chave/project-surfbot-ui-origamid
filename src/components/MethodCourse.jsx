@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { changeAdult, changeProfessional, changeChild } from '../redux/actions';
 import pran1 from '../images/surfbot-icon.svg';
 import pran2 from '../images/Group1.svg';
@@ -120,12 +121,18 @@ function MethodCourse(props) {
   );
 }
 
+MethodCourse.propTypes = {
+  childDispatch: PropTypes.func.isRequired,
+  adultDispatch: PropTypes.func.isRequired,
+  professionalDispatch: PropTypes.func.isRequired,
+};
+
 function mapDispatchToProps(dispatch) {
   return {
     childDispatch: () => dispatch(changeChild()),
     adultDispatch: () => dispatch(changeAdult()),
     professionalDispatch: () => dispatch(changeProfessional())
-  }
+  };
 }
 
 const Container = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import block from '../images/cadeado.svg';
 import MethodCourse from './MethodCourse';
 
@@ -92,6 +93,10 @@ function FormRegister(props) {
     </Container>
   );
 }
+
+FormRegister.propTypes = {
+  numberValue: PropTypes.number.isRequired,
+};
 
 function mapStateToProps(state) {
   return {
