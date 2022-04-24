@@ -47,8 +47,6 @@ const Container = styled.nav`
       width: 100%;
       top: 96px;
       right: 0px;
-      /* backdrop-filter: blur(25px); */
-      /* opacity: 0.3; */
       background: rgba(0, 0, 0, 0.01);
       background: rgba(0, 0, 0, 0.8);
       transition: 0.3s;
@@ -58,7 +56,6 @@ const Container = styled.nav`
       overflow-y: hidden;
     }
     &.active #menu {
-      /* position: fixed; */
       height: calc(100vh);
       visibility: visible;
       overflow-y: auto;
