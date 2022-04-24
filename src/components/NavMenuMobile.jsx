@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 
 function NavMenuMobile() {
-  // const btnMobile = document.getElementById('btn-mobile');
 
   function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();
@@ -17,10 +15,6 @@ function NavMenuMobile() {
     }
   }
 
-  // useEffect(() => {
-    // btnMobile.addEventListener('click', toggleMenu);
-    // btnMobile.addEventListener('touchstart', toggleMenu);
-  // }, []);
   return (
     <Container id="nav">
       <button onClick={(event) => toggleMenu(event)} aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
