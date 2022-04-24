@@ -7,27 +7,27 @@ import NavMenuMobile from './NavMenuMobile';
 
 function Header() {
   return(
-    <Div>
-      <Link to="/">
-        <ImageLogo src={ logo } alt="logo" />
+    <Container>
+      <Link className='link-logo' to="/">
+        <img src={ logo } alt="logo" />
       </Link>
       <NavMenu />
       <NavMenuMobile />
-    </Div>
+    </Container>
   );
 }
 
-const Div = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
+  align-items: center;
   background: #17222D;
-`;
 
-const ImageLogo = styled.img`
-  width: 150px;
-  height: 45px;
-  margin-left: 5%;
+  .link-logo {
+    margin-left: 5%;
+  }
+  
 `;
 
 export default Header;
