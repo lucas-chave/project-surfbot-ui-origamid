@@ -1,76 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import menu from '../images/menu.svg';
 
 function NavMenu() {
-  const [varBool, setVarBool] = useState(false);
-  const widthPage = document.body.clientWidth;
-  const proxyUseVarBool = () => setVarBool(!varBool);
-  function alterMenu() {
-    if (varBool) {
-      return (
-        <>
-          <img onClick={() => proxyUseVarBool() } src={menu} alt="icone menu"/>
-          <ContainerListResponsive className="containerListResponsive">
-            <UlResponsive className="ulResponsive">
-              <li>Praia</li>
-              <li>Aulas</li>
-              <li>contato</li>
-              <Link to="/register">
-                <li>Matricule-se</li>
-              </Link>
-            </UlResponsive>
-          </ContainerListResponsive>
-        </>
-      );   
-    }
-    return <img onClick={() => proxyUseVarBool() } src={menu} alt="icone menu"/>;
-  }
-
   return(
     <>
-      {widthPage > 575 ? (
-        <ContainerNav>
-          <List>
-            <ListItem>Praia</ListItem>
-            <IconElement></IconElement>
-            <ListItem>Aulas</ListItem>
-            <IconElement></IconElement>
-            <ListItem>contato</ListItem>
-            <IconElement></IconElement>
-            <Link to="/register">
-              <ListItem>Matricule-se</ListItem>
-            </Link>
-          </List>
-        </ContainerNav>
-        ) : alterMenu()}
+      <ContainerNav>
+        <List>
+          <ListItem>Praia</ListItem>
+          <IconElement></IconElement>
+          <ListItem>Aulas</ListItem>
+          <IconElement></IconElement>
+          <ListItem>contato</ListItem>
+          <IconElement></IconElement>
+          <Link to="/register">
+            <ListItem>Matricule-se</ListItem>
+          </Link>
+        </List>
+      </ContainerNav>  
     </>
   );
 }
-
-const ContainerListResponsive = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  background: cornsilk;
-  position: absolute;
-`;
-
-const UlResponsive = styled.ul`
-  display: flex;
-  flex-direction: column;
-
-  li {
-    list-style: none;
-  }
-`;
 
 const ContainerNav = styled.nav`
   display: flex;
   align-self: center;
   margin-right: 5%;
+  @media(max-width: 700px) {
+    display: none;
+  }
 `;
 
 const List = styled.ul`
