@@ -1,8 +1,8 @@
 import React from 'react';
-import SetaContact from '../images/seta-contact.svg';
-import setaButton from '../images/seta.svg';
-import bgIcons from '../images/bg-icones.svg';
-import '../css/sectionContact.css';
+import SetaContact from '../../images/seta-contact.svg';
+import setaButton from '../../images/seta.svg';
+import bgIcons from '../../images/bicones.svg';
+import '../../css/sectionContact.css';
 
 function SectionContact() {
   return (

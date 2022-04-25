@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import image from '../images/quote-image.png';
+import image from '../../images/quote-image.png';
 
 function SectionQuote() {
   return (

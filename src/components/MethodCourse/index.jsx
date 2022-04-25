@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { changeAdult, changeProfessional, changeChild } from '../redux/actions';
-import pran1 from '../images/surfbot-icon.svg';
-import pran2 from '../images/Group1.svg';
-import pran3 from '../images/Group2.svg';
+import { changeAdult, changeProfessional, changeChild } from '../../redux/actions';
+import pran1 from '../../images/pran.svg';
+import pran2 from '../../images/pran1.svg';
+import pran3 from '../../images/pran2.svg';
 
 function MethodCourse(props) {
   const { adultDispatch, childDispatch, professionalDispatch } = props;

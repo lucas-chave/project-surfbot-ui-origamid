@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import iconBoia from '../images/boia.svg';
-import iconCoco from '../images/coco.svg';
-import iconSandalhas from '../images/sandalhas.svg';
+import iconBoia from '../../images/boia.svg';
+import iconCoco from '../../images/coco.svg';
+import iconSandalhas from '../../images/sandalhas.svg';
 
 function CardList() {
   const data = [

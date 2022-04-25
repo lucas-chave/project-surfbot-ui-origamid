@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import block from '../images/cadeado.svg';
-import MethodCourse from './MethodCourse';
+import block from '../../images/cadeado.svg';
+import MethodCourse from '../MethodCourse';
 
 function FormRegister(props) {
   const [changeColor, setChangeColor] = useState();

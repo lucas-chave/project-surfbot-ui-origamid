@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
-import waves from '../images/ondas.svg';
-import pran1 from '../images/surfbot-icon.svg';
-import pran2 from '../images/Group1.svg';
-import pran3 from '../images/Group2.svg';
-import setButton from '../images/seta.svg';
-import '../css/sectionCards.css'
+import waves from '../../images/ondas.svg';
+import pran1 from '../../images/pran.svg';
+import pran2 from '../../images/pran1.svg';
+import pran3 from '../../images/pran2.svg';
+import setButton from '../../images/seta.svg';
+import '../../css/sectionCards.css'
 import { connect } from 'react-redux';
-import { changeAdult, changeChild, changeProfessional } from '../redux/actions';
+import { changeAdult, changeChild, changeProfessional } from '../../redux/actions';
 
 function SectionCads(props) {
   const { adultDispatch, childDispatch, professionalDispatch } = props;

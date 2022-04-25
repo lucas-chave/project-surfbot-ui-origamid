@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../images/surfbot-logo.svg';
-import NavMenu from './NavMenu';
-import NavMenuMobile from './NavMenuMobile';
+import logo from '../../images/surfbot-logo.svg';
+import NavMenu from '../NavMenu';
+import NavMenuMobile from '../NavMenuMobile';
 
 function Header() {
   return(

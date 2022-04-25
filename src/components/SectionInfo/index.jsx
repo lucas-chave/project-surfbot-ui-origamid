@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from  'styled-components';
-import ImageS2 from './ImageS2';
-import image from '../images/abigail.svg';
-import map from '../images/mapa.svg';
-import Heading from './Heading';
-import CardList from './CardList';
-import Paragraph from './Paragraph';
-import TextInfor from './TextInfor';
+import ImageS2 from '../ImageS2';
+import image from '../../images/bigail.svg';
+import map from '../../images/mapa.svg';
+import Heading from '../Heading';
+import CardList from '../CardList';
+import Paragraph from '../Paragraph';
+import TextInfor from '../TextInfo';
 
 function SectionInfor() {
   const text = (

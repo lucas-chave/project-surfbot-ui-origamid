@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import image from '../images/foto-srf.svg';
-import seta from '../images/seta.svg';
+import image from '../../images/foto-srf.svg';
+import seta from '../../images/seta.svg';
 
 function Banner() {
   return (
