@@ -54,6 +54,8 @@ function MethodCourse(props) {
 
   function renderCards() {
     const numberCard = changeCard();
+    console.log(numberCard);
+    console.log(cardsData)
     return (
        <div className="card">
         <img src={cardsData[numberCard].image} alt="icone de uma prancha" className="icon-card" />
@@ -100,7 +102,7 @@ function MethodCourse(props) {
       <h4>Escolha o Plano</h4>
       <ContainerInputs>
         <ContainerInput id="containerChild">
-          <input defaultChecked id="child" name="flat" type="radio" onClick={({target}) => setInputSelected(target.id) } />
+          <input  id="child" name="flat" type="radio" onClick={({target}) => setInputSelected(target.id) } />
           <label htmlFor="child">Infantil</label>
         </ContainerInput>
         <div className="separator"/>

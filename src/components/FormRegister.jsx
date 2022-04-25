@@ -119,7 +119,7 @@ FormRegister.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    numberValue: state.reducerValue.state,
+    numberValue: state.pricePlan.pricePlan,
   };
 }
 

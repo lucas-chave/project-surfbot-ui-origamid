@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import reducerValue from './value';
+import pricePlan from './pricePlan';
 
 const rootReducer = combineReducers({
-  reducerValue,
+  pricePlan,
 });
 
 export default rootReducer;

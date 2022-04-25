@@ -1,13 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Link, useHistory } from 'react-router-dom';
 import waves from '../images/ondas.svg';
 import pran1 from '../images/surfbot-icon.svg';
 import pran2 from '../images/Group1.svg';
 import pran3 from '../images/Group2.svg';
 import setButton from '../images/seta.svg';
 import '../css/sectionCards.css'
+import { connect } from 'react-redux';
+import { changeAdult, changeChild, changeProfessional } from '../redux/actions';
 
-function SectionCads() {
+function SectionCads(props) {
+  const { adultDispatch, childDispatch, professionalDispatch } = props;
+  const history = useHistory();
+
   const cardsData = [
     {
       image: pran1,
@@ -19,6 +25,7 @@ function SectionCads() {
         '2 horas seguidas de aula',
       ],
       price: '49,00',
+      function: childDispatch,
     },
     {
       image: pran2,
@@ -30,6 +37,8 @@ function SectionCads() {
         '2 horas seguidas de aula',
       ],
       price: '49,00',
+      function: adultDispatch,
+
     },
     {
       image: pran3,
@@ -41,8 +50,14 @@ function SectionCads() {
         '2 horas seguidas de aula',
       ],
       price: '49,00',
+      function: professionalDispatch,
     },
   ];
+
+  const toRegister = (func) => {
+    func();
+    history.push('/register');
+  }
 
   return(
     <div className="container-cards">
@@ -59,7 +74,7 @@ function SectionCads() {
                 ))}
               </div>
               <div className="card-price">{`R$ ${card.price} / Aula`}</div>
-              <Link to="/register" className="button-registration">
+              <Link onClick={() => toRegister(card.function)}  to="/register" className="button-registration">
                 MATRICULE-SE<img src={setButton} alt="icone de botão" className="image-button" />
               </Link>
             </div>
@@ -71,4 +86,18 @@ function SectionCads() {
   );
 }
 
-export default SectionCads;
+function mapDispatchToProps(dispatch) {
+  return {
+    childDispatch: () => dispatch(changeChild()),
+    adultDispatch: () => dispatch(changeAdult()),
+    professionalDispatch: () => dispatch(changeProfessional())
+  };
+}
+
+SectionCads.propTypes = {
+  childDispatch: PropTypes.func.isRequired,
+  adultDispatch: PropTypes.func.isRequired,
+  professionalDispatch: PropTypes.func.isRequired,
+};
+
+export default connect(null, mapDispatchToProps)(SectionCads);
