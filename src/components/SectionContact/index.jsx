@@ -1,53 +1,71 @@
 import React from 'react';
+
 import SetaContact from '../../images/seta-contact.svg';
 import setaButton from '../../images/seta.svg';
 import bgIcons from '../../images/bicones.svg';
-import '../../css/sectionContact.css';
+
+import {
+  ButtonSendMessage,
+  ContainerDetailInformations,
+  ContainerDetailInformationsHour,
+  ContainerInformation,
+  ContainerInputContact,
+  ContainerSectionContact,
+  FormContact,
+  ImageIConsInformation,
+  InformationAddress,
+  MapIndication,
+  SubContainerContact,
+  SubContainerInformation,
+  TitleInformationAddress,
+  TitleInformationHour,
+  TitleSectionContact
+} from './styles.js';
 
 function SectionContact() {
   return (
-    <div className="container-section-contact">
-      <h2 className="title-section-contact">Contato</h2>
-      <div className="sub-container-contact">
-        <form>
-          <div className="container-input-contact">
+    <ContainerSectionContact>
+      <TitleSectionContact>Contato</TitleSectionContact>
+      <SubContainerContact>
+        <FormContact>
+          <ContainerInputContact>
             <label>Nome</label>
             <input type="text" />
-          </div>
-          <div className="container-input-contact">
+          </ContainerInputContact>
+          <ContainerInputContact>
             <label>Email</label>
             <input type="email" />
-          </div>
-          <div className="container-input-contact">
+          </ContainerInputContact>
+          <ContainerInputContact>
             <label>Mensagem</label>
             <textarea />
-          </div>
-          <button className="button-send-message">ENVIAR MENSAGEM <img src={setaButton} alt="icone de seta" /></button>
-        </form>
+          </ContainerInputContact>
+          <ButtonSendMessage>ENVIAR MENSAGEM <img src={setaButton} alt="icone de seta" /></ButtonSendMessage>
+        </FormContact>
         <div className="trace" />
-        <div className="container-information">
-          <div className="sub-container-information">
-            <div className="container-detail-informations">
-              <p className="title-information-address">Endereço</p>
-              <p className="information-address">Prai mansa n: 47</p>
-              <p className="information-address">Procure a barraca vermelha</p>
-              <p className="map-indication">VER NO MAPA <img src={ SetaContact } alt="icone de seta"/></p>
-            </div>
-            <div className="container-detail-informations">
-              <p className="title-information-address">Email & telefone</p>
-              <p className="information-address">contato@surfbot.com</p>
-              <p className="information-address">88 99999-9999</p>
-            </div>
-            <div className="container-detail-informations-hour">
-              <p className="title-information-hour">Horário</p>
-              <p className="information-address">De Sexta à sábado</p>
-              <p className="information-address">das 06:00 às 14:00</p>
-            </div>
-          </div>
-          <img className="image-icons-information" src={ bgIcons } alt="icones"/>
-        </div>
-      </div>
-    </div>
+        <ContainerInformation>
+          <SubContainerInformation>
+            <ContainerDetailInformations>
+              <TitleInformationAddress>Endereço</TitleInformationAddress>
+              <InformationAddress>Prai mansa n: 47</InformationAddress>
+              <InformationAddress>Procure a barraca vermelha</InformationAddress>
+              <MapIndication>VER NO MAPA <img src={ SetaContact } alt="icone de seta"/></MapIndication>
+            </ContainerDetailInformations>
+            <ContainerDetailInformations>
+              <TitleInformationAddress>Email & telefone</TitleInformationAddress>
+              <InformationAddress>contato@surfbot.com</InformationAddress>
+              <InformationAddress>88 99999-9999</InformationAddress>
+            </ContainerDetailInformations>
+            <ContainerDetailInformationsHour>
+              <TitleInformationHour>Horário</TitleInformationHour>
+              <InformationAddress>De Sexta à sábado</InformationAddress>
+              <InformationAddress>das 06:00 às 14:00</InformationAddress>
+            </ContainerDetailInformationsHour>
+          </SubContainerInformation>
+          <ImageIConsInformation src={ bgIcons } alt="icones"/>
+        </ContainerInformation>
+      </SubContainerContact>
+    </ContainerSectionContact>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+
+import { ContainerNav, IconElement, List, ListItem } from './styles';
 
 function NavMenu() {
   return(
@@ -21,33 +22,5 @@ function NavMenu() {
     </>
   );
 }
-
-const ContainerNav = styled.nav`
-  display: flex;
-  align-self: center;
-  margin-right: 5%;
-  @media(max-width: 700px) {
-    display: none;
-  }
-`;
-
-const List = styled.ul`
-    display: flex;
-    align-items: center;
-`;
-
-const ListItem = styled.li`
-  list-style: none;
-  margin: 0 20px;
-  color: #fff;
-`;
-
-const IconElement = styled.div`
-  width: 8px;
-  height: 8px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  box-sizing: border-box;
-`
 
 export default NavMenu;

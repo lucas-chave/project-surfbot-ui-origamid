@@ -1,58 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, useHistory } from 'react-router-dom';
-import waves from '../../images/ondas.svg';
-import pran1 from '../../images/pran.svg';
-import pran2 from '../../images/pran1.svg';
-import pran3 from '../../images/pran2.svg';
-import setButton from '../../images/seta.svg';
-import '../../css/sectionCards.css'
+import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import waves from '../../images/ondas.svg';
+import setButton from '../../images/seta.svg';
+
 import { changeAdult, changeChild, changeProfessional } from '../../redux/actions';
+
+import {
+  ButtonRegistration,
+  Card,
+  CardPrice,
+  Cards,
+  ContactName,
+  ContainerCards,
+  IconCard,
+  IconWave,
+  TagsCard,
+  TitleCard,
+  TitleCards
+} from './styles.js';
+
+import { cardsData } from './data';
 
 function SectionCads(props) {
   const { adultDispatch, childDispatch, professionalDispatch } = props;
   const history = useHistory();
-
-  const cardsData = [
-    {
-      image: pran1,
-      title: 'INFANTIL',
-      tags: [
-        'Público entre 5 e 15 anos',
-        'equipamentos fornecidos',
-        'Horários de sexta a sábado',
-        '2 horas seguidas de aula',
-      ],
-      price: '49,00',
-      function: childDispatch,
-    },
-    {
-      image: pran2,
-      title: 'ADULTO',
-      tags: [
-        'Público entre 5 e 15 anos',
-        'equipamentos fornecidos',
-        'Horários de sexta a sábado',
-        '2 horas seguidas de aula',
-      ],
-      price: '49,00',
-      function: adultDispatch,
-
-    },
-    {
-      image: pran3,
-      title: 'PROFISSIONAL',
-      tags: [
-        'Público entre 5 e 15 anos',
-        'equipamentos fornecidos',
-        'Horários de sexta a sábado',
-        '2 horas seguidas de aula',
-      ],
-      price: '49,00',
-      function: professionalDispatch,
-    },
-  ];
 
   const toRegister = (func) => {
     func();
@@ -60,29 +34,29 @@ function SectionCads(props) {
   }
 
   return(
-    <div className="container-cards">
-        <img src={ waves } alt="icone de ondas" className="icon-wave" />
-        <h4 className="title-cards">Aulas</h4>
-        <div className="cards">
-          {cardsData.map((card, index) => (
-            <div key={index} className="card">
-              <img src={card.image} alt="icone de uma prancha" className="icon-card" />
-              <h4 className="title-card">{card.title}</h4>
-              <div className="tags-card">
+    <ContainerCards className="container-cards">
+        <IconWave src={ waves } alt="icone de ondas" className="icon-wave" />
+        <TitleCards className="title-cards">Aulas</TitleCards>
+        <Cards className="cards">
+          {cardsData(childDispatch, adultDispatch, professionalDispatch).map((card, index) => (
+            <Card key={index} className="card">
+              <IconCard src={card.image} alt="icone de uma prancha" className="icon-card" />
+              <TitleCard className="title-card">{card.title}</TitleCard>
+              <TagsCard className="tags-card">
                 {card.tags.map((tag, index) => (
                   <span key={index}>{tag}</span>
                 ))}
-              </div>
-              <div className="card-price">{`R$ ${card.price} / Aula`}</div>
-              <Link onClick={() => toRegister(card.function)}  to="/register" className="button-registration">
+              </TagsCard>
+              <CardPrice className="card-price">{`R$ ${card.price} / Aula`}</CardPrice>
+              <ButtonRegistration onClick={() => toRegister(card.function)}  to="/register" className="button-registration">
                 MATRICULE-SE<img src={setButton} alt="icone de botão" className="image-button" />
-              </Link>
-            </div>
+              </ButtonRegistration>
+            </Card>
           ))}
-        </div>
+        </Cards>
         <p>Possui um grupo com mais de <span className="threePeople">3 pessoas</span>?</p>
-        <p>Entre <span className="contact-name">em contato</span> para um desconto personalizado.</p>
-    </div>
+        <ContactName>Entre <span className="contact-name">em contato</span> para um desconto personalizado.</ContactName>
+    </ContainerCards>
   );
 }
 

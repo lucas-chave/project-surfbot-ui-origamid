@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+
 import logo from '../../images/surfbot-logo.svg';
+
 import NavMenu from '../NavMenu';
 import NavMenuMobile from '../NavMenuMobile';
+
+import { Container } from './styles';
 
 function Header() {
   return(
@@ -16,18 +19,5 @@ function Header() {
     </Container>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  align-items: center;
-  background: #17222D;
-
-  .link-logo {
-    margin-left: 5%;
-  }
-  
-`;
 
 export default Header;

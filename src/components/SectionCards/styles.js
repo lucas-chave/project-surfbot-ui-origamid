@@ -1,11 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-.container-cards {
+export const ContainerCards = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,28 +9,39 @@
   background: #EFF4F9;
   padding-bottom: 57px;
   width: 100%;
-}
 
-.icon-wave {
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  .threePeople {
+    color: #FF3726;
+  }
+`;
+
+export const IconWave = styled.img`
   margin: -35px 0 30px;
-}
+`;
 
-.title-cards {
+export const TitleCards = styled.h2`
   font-size: 72px;
   line-height: 82px;
   font-weight: 400;
   font-family: Alice;
   margin-bottom: 42px;
   color: #445566;
-}
+`;
 
-.cards {
+export const Cards = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
+`;
 
-.card {
+export const Card = styled.div`
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -43,49 +50,49 @@
   padding: 30px;
   box-shadow: 0px 5px 5px rgba(187, 204, 221, 0.4), 0px 10px 10px rgba(187, 204, 221, 0.4);
   border-radius: 5px;
-}
+`;
 
-.icon-card {
+export const IconCard = styled.div`
   margin: -50px 0 0 0;
-}
+`;
 
-.title-card {
+export const TitleCard = styled.h3`
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
   text-align: center;
   margin: 20px 0;
   color: #445566;
-}
+`;
 
-.tags-card {
+export const TagsCard = styled.div`
   display: flex;
   flex-direction: column;
-}
 
-.tags-card span {
-  margin: 10px 0;
-}
+  span {
+    margin: 10px 0;
+  }
 
-.tags-card span::before {
-  content: '';
-  width: 8px;
-  display: inline-block;
-  margin: 0 6px 0 0;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid #FF3726;
-}
+  &::before {
+    content: '';
+    width: 8px;
+    display: inline-block;
+    margin: 0 6px 0 0;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #FF3726;
+  }
+`;
 
-.card-price {
+export const CardPrice = styled.p`
   display: flex;
   align-self: flex-start;
   margin-top: 20px;
   color: #1188EE;
   font-weight: 700;
-}
+`;
 
-.button-registration {
+export const ButtonRegistration = styled(Link)`
   margin-top: 32px;
   width: 230px;
   height: 40px;
@@ -99,25 +106,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+`
 
-.container-cards p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 29px;
-  text-align: center;
-}
-
-.threePeople {
-  color: #FF3726;
-}
-
-.contact-name::before {
-  content: '';
-  width: 90px;
-  display: block;
-  position: absolute;
-  margin: 1px 0 0 50px;
-  height: 2px;
-  background: #FF3726;
-}
+export const ContactName = styled.p`
+  &::before {
+    content: '';
+    width: 90px;
+    display: block;
+    position: absolute;
+    margin: 1px 0 0 50px;
+    height: 2px;
+    background: #FF3726;
+  }
+`;
