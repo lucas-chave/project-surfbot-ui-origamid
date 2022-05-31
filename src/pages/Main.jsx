@@ -4,11 +4,11 @@ import Loading from '../components/Loading';
 const Description = React.lazy(() => import('../components/Description'));
 const Header = React.lazy(() => import('../components/Header'));
 const Banner = React.lazy(() => import('../components/Banner'));
-const SectionInfor = React.lazy(() => import('../components/SectionInfor'));
+const SectionInfor = React.lazy(() => import('../components/SectionInfo'));
 const SectionCads = React.lazy(() => import('../components/SectionCards'));
 const SectionQuote = React.lazy(() => import('../components/SectionQuote'));
 const SectionContact = React.lazy(() => import('../components/SectionContact'));
-const SectionFooter = React.lazy(() => import('../components/SectionFooter'));
+const SectionFooter = React.lazy(() => import('../components/Footer'));
 
 
 function Main() {
